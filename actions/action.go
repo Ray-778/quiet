@@ -73,6 +73,8 @@ func PortScan(ctx *cli.Context) error {
 }
 
 func ICMPScan(ctx *cli.Context) error {
+	// ICMP must run as root
+	util.CheckRoot()
 	// ip
 	if ctx.IsSet("iplist") {
 		netips, err := util.GetIpList(ctx.String("iplist"))

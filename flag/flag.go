@@ -6,9 +6,9 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-// ./main --iplist ip_list --port port_list --mode syn  --timeout 2 --concurrency 10
+// ./main ps --iplist ip_list --port port_list --mode syn  --timeout 2 --concurrency 10
 var PortScanCom = &cli.Command{
-	Name:        "port scan",
+	Name:        "portscan",
 	Usage:       "tcp syn/connect port scanner",
 	Aliases:     []string{"ps", "p", "port"},
 	Description: "start to scan port",
@@ -51,10 +51,10 @@ var PortScanCom = &cli.Command{
 	},
 }
 
-// ./main --iplist ip_list --timeout 2 --concurrency 10
-// ./main --domain domain --timeout 2 --concurrency 10
+// ./main ping --iplist ip_list --timeout 2 --concurrency 10
+// ./main ping --domain domain --timeout 2 --concurrency 10
 var ICMPScanCom = &cli.Command{
-	Name:        "ICMP scan",
+	Name:        "ICMPscan",
 	Usage:       "ICMP scanner",
 	Aliases:     []string{"icmpscan", "is", "ping"},
 	Description: "start to ping a host",
