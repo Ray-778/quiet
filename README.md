@@ -11,8 +11,8 @@ go build -o quiet
 ## 功能
 
 ```
-portscan, ps, p, port			tcp syn/connect port scanner
-ICMPscan, icmpscan, is, ping	ICMP scanner
+portscan, ps, p, port         tcp syn/connect port scanner
+ICMPscan, icmpscan, is, ping  ICMP scanner
 ```
 
 ### 端口扫描（TCP-Connect 与 TCP-SYN）
